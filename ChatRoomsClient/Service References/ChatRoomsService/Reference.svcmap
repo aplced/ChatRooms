@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="762b54bc-f104-4ada-9725-224303551212" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:2222" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="6aa036b1-a6e1-47a1-9561-aa4d7b1aba99" SourceId="1" SourceUrl="http://localhost:2222/?xsd=xsd2" />
+    <MetadataFile FileName="ChatRoomsService.wsdl" MetadataType="Wsdl" ID="4ce47e69-d683-44b7-8400-11f739bab644" SourceId="1" SourceUrl="http://localhost:2222/?wsdl" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="f07580f8-0fef-4fbc-8788-70f0dc532c8c" SourceId="1" SourceUrl="http://localhost:2222/?xsd=xsd0" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="83cc60c4-abd6-4b0c-8aab-63446788a4d9" SourceId="1" SourceUrl="http://localhost:2222/?disco" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="dc035147-2510-487f-9f43-1d83f4039eee" SourceId="1" SourceUrl="http://localhost:2222/?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
