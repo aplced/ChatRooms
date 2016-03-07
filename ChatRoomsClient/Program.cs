@@ -79,7 +79,7 @@ namespace ChatRoomsClient
                             var roomName = cmdArguments[i++];
                             StringBuilder message = new StringBuilder();
                             for (int restArgs = i; restArgs < cmdArguments.Length; restArgs++)
-                                message.Append(cmdArguments[restArgs]);
+                                message.Append(cmdArguments[restArgs] + " ");
                             SendMessage(admin, roomName, message.ToString());
                             cmd = Commands.NONE;
                         }
