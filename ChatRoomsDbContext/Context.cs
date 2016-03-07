@@ -22,10 +22,29 @@ namespace ChatRoomsDbContext
             set;
         }
 
-        DbSet<Message> Messages
+        public DbSet<Message> Messages
         {
             get;
             set;
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            //modelBuilder.Entity<Room>()
+            //    .HasRequired(t => t.Admin)
+            //    .WithRequiredDependent();
+
+            //modelBuilder.Entity<Room>().HasMany(p => p.Users).WithMany(t => t.Rooms);
+
+            //modelBuilder.Entity<Message>()
+            //    .HasRequired(t => t.User)
+            //    .WithRequiredPrincipal();
+
+            //modelBuilder.Entity<Message>()
+            //    .HasRequired(t => t.Room)
+            //    .WithRequiredPrincipal();
+
+            base.OnModelCreating(modelBuilder);
         }
 
         public override int SaveChanges()

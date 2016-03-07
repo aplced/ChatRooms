@@ -7,21 +7,18 @@ using System.Threading.Tasks;
 
 namespace ChatRoomsDataTypes
 {
-    public class Message : BaseEntity
+    [DataContract(IsReference = true)]
+    public abstract class BaseEntity : ICreationTracking
     {
-        public String Text
+        [DataMember]
+        public DateTime Created
         {
             get;
             set;
         }
 
-        public User User
-        {
-            get;
-            set;
-        }
-
-        public Room Room
+        [DataMember]
+        public int Id
         {
             get;
             set;

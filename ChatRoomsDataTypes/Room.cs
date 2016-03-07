@@ -7,59 +7,34 @@ using System.Threading.Tasks;
 
 namespace ChatRoomsDataTypes
 {
-    [DataContract]
-    public class Room : ICreationTracking
+    public class Room : BaseEntity
     {
         public Room()
         {
-            Users = new List<User>();
+            //Users = new List<User>();
             Messages = new List<Message>();
         }
 
-        [DataMember]
-        public int Id
-        {
-            get;
-            set;
-        }
-
-        [DataMember]
         public String Name
         {
             get;
             set;
         }
 
-        [DataMember]
-        public int UserId
+        //[DataMember]
+        //public User Admin
+        //{
+        //    get;
+        //    set;
+        //}
+
+        public ICollection<User> Users
         {
             get;
             set;
         }
 
-        [DataMember]
-        public User User
-        {
-            get;
-            set;
-        }
-
-        [DataMember]
-        public List<User> Users
-        {
-            get;
-            set;
-        }
-
-        [DataMember]
-        public List<Message> Messages
-        {
-            get;
-            set;
-        }
-
-        [DataMember]
-        public DateTime Created
+        public ICollection<Message> Messages
         {
             get;
             set;

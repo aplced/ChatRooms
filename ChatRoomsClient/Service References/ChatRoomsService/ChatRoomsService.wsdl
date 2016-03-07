@@ -13,6 +13,12 @@
   <wsdl:message name="IChatRoomsService_AllUsers_OutputMessage">
     <wsdl:part name="parameters" element="tns:AllUsersResponse" />
   </wsdl:message>
+  <wsdl:message name="IChatRoomsService_AllRooms_InputMessage">
+    <wsdl:part name="parameters" element="tns:AllRooms" />
+  </wsdl:message>
+  <wsdl:message name="IChatRoomsService_AllRooms_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllRoomsResponse" />
+  </wsdl:message>
   <wsdl:message name="IChatRoomsService_CreateUser_InputMessage">
     <wsdl:part name="parameters" element="tns:CreateUser" />
   </wsdl:message>
@@ -42,6 +48,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IChatRoomsService/AllUsers" message="tns:IChatRoomsService_AllUsers_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IChatRoomsService/AllUsersResponse" message="tns:IChatRoomsService_AllUsers_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="AllRooms">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatRoomsService/AllRooms" message="tns:IChatRoomsService_AllRooms_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatRoomsService/AllRoomsResponse" message="tns:IChatRoomsService_AllRooms_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="CreateUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IChatRoomsService/CreateUser" message="tns:IChatRoomsService_CreateUser_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IChatRoomsService/CreateUserResponse" message="tns:IChatRoomsService_CreateUser_OutputMessage" />
@@ -63,6 +73,15 @@
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="AllUsers">
       <soap:operation soapAction="http://tempuri.org/IChatRoomsService/AllUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllRooms">
+      <soap:operation soapAction="http://tempuri.org/IChatRoomsService/AllRooms" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

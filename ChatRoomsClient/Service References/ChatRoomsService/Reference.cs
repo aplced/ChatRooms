@@ -21,6 +21,12 @@ namespace ChatRoomsClient.ChatRoomsService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatRoomsService/AllUsers", ReplyAction="http://tempuri.org/IChatRoomsService/AllUsersResponse")]
         System.Threading.Tasks.Task<System.Collections.Generic.List<ChatRoomsDataTypes.User>> AllUsersAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatRoomsService/AllRooms", ReplyAction="http://tempuri.org/IChatRoomsService/AllRoomsResponse")]
+        System.Collections.Generic.List<ChatRoomsDataTypes.Room> AllRooms();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatRoomsService/AllRooms", ReplyAction="http://tempuri.org/IChatRoomsService/AllRoomsResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<ChatRoomsDataTypes.Room>> AllRoomsAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatRoomsService/CreateUser", ReplyAction="http://tempuri.org/IChatRoomsService/CreateUserResponse")]
         ChatRoomsDataTypes.User CreateUser(string alias);
         
@@ -79,6 +85,14 @@ namespace ChatRoomsClient.ChatRoomsService {
         
         public System.Threading.Tasks.Task<System.Collections.Generic.List<ChatRoomsDataTypes.User>> AllUsersAsync() {
             return base.Channel.AllUsersAsync();
+        }
+        
+        public System.Collections.Generic.List<ChatRoomsDataTypes.Room> AllRooms() {
+            return base.Channel.AllRooms();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<ChatRoomsDataTypes.Room>> AllRoomsAsync() {
+            return base.Channel.AllRoomsAsync();
         }
         
         public ChatRoomsDataTypes.User CreateUser(string alias) {

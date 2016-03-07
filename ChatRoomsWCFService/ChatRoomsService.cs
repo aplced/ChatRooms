@@ -19,6 +19,11 @@ namespace ChatRoomsWCFService
             return repo.GetAllUsers();    
         }
 
+        public List<Room> AllRooms()
+        {
+            return repo.GetAllRooms();
+        }
+
         public Room CreateRoom(User user, string name, List<User> participants)
         {
             return repo.CreateRoom(user, name, participants);

@@ -15,6 +15,9 @@ namespace ChatRoomsWCFService
         List<User> AllUsers();
 
         [OperationContract]
+        List<Room> AllRooms();
+
+        [OperationContract]
         User CreateUser(String alias);
 
         [OperationContract]
